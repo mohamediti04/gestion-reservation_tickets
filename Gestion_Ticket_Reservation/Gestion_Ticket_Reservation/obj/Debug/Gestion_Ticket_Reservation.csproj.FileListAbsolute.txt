@@ -9,3 +9,14 @@ C:\Users\Mohamed ITI\Desktop\db sql bus\Gestion_Ticket_Reservation\Gestion_Ticke
 C:\Users\Mohamed ITI\Desktop\db sql bus\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.exe
 C:\Users\Mohamed ITI\Desktop\db sql bus\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.pdb
 C:\Users\Mohamed ITI\Desktop\db sql bus\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\bin\Debug\Gestion_Ticket_Reservation.exe.config
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.exe
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.pdb
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\bin\Debug\Gestion_Ticket_Reservation.exe
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\bin\Debug\Gestion_Ticket_Reservation.pdb
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Form1.resources
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Login.resources
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Properties.Resources.resources
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Ticket.resources
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.csproj.GenerateResource.Cache
