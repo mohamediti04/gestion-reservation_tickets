@@ -100,7 +100,7 @@ namespace Gestion_Ticket_Reservation
                 sqlCommande = new SqlCommand();
                 sqlCommande.Connection = sqlConnection;
 
-                SqlDataAdapter da = new SqlDataAdapter("SELECT id,nom FROM t_user", sqlConnection);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT id,nom FROM t_user where profile = 2", sqlConnection);//Profile 2 =>Passager
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 comboBox3.DataSource = dt;
@@ -169,11 +169,11 @@ namespace Gestion_Ticket_Reservation
                 {
                     dataGridView1.Rows.Add(new object[] { 
             read.GetValue(read.GetOrdinal("id")),  // Or column name like this
-            read.GetValue(read.GetOrdinal("chauffeur")),
-            read.GetValue(read.GetOrdinal("passager")),
+            getUserNameById(Convert.ToInt32( read.GetValue(read.GetOrdinal("chauffeur")))),
+            getUserNameById(Convert.ToInt32( read.GetValue(read.GetOrdinal("passager")))),
               read.GetValue(read.GetOrdinal("date")),
-                read.GetValue(read.GetOrdinal("station_depart")),
-                  read.GetValue(read.GetOrdinal("station_arrive")),
+                  getStationNameById(Convert.ToInt32(read.GetValue(read.GetOrdinal("station_depart")))),
+                      getStationNameById(Convert.ToInt32(read.GetValue(read.GetOrdinal("station_arrive")))),
                     read.GetValue(read.GetOrdinal("prix"))
 
             });
@@ -240,14 +240,16 @@ namespace Gestion_Ticket_Reservation
                         // Open the document to enable you to write to the document  
                         document.Open();
                         // Add a simple and wellknown phrase to the document in a flow layout manner  
-                        document.Add(new Paragraph("Billet N° : " + read.GetValue(read.GetOrdinal("id"))));
-                       // document.Add(new Paragraph("Chauffeur : " + read.GetValue(read.GetOrdinal("chauffeur"))));
-                       // document.Add(new Paragraph("Passager : " + read.GetValue(read.GetOrdinal("passager"))));
-                        document.Add(new Paragraph("Date voyage : "+read.GetValue(read.GetOrdinal("date"))));
-                        document.Add(new Paragraph("Station Départ : " + read.GetValue(read.GetOrdinal("station_depart"))));
-                        document.Add(new Paragraph("Station Arrive: " + read.GetValue(read.GetOrdinal("station_arrive"))));
+                        document.Add(new Paragraph("|=============Bus Tickets=============|"));
+                        document.Add(new Paragraph("|Billet N° : " + read.GetValue(read.GetOrdinal("id"))));
+                       document.Add(new Paragraph("|Chauffeur : " +getUserNameById(Convert.ToInt32( read.GetValue(read.GetOrdinal("chauffeur"))))));
+                       document.Add(new Paragraph("|Passager : " +getUserNameById(Convert.ToInt32( read.GetValue(read.GetOrdinal("passager"))))));
+
+                        document.Add(new Paragraph("|Date voyage : "+read.GetValue(read.GetOrdinal("date"))));
+                        document.Add(new Paragraph("|Station Départ : " + getStationNameById(Convert.ToInt32(read.GetValue(read.GetOrdinal("station_depart"))))));
+                        document.Add(new Paragraph("|Station Arrive: " + getStationNameById(Convert.ToInt32(read.GetValue(read.GetOrdinal("station_arrive"))))));
                         document.Add(new Paragraph("Prix : " + read.GetValue(read.GetOrdinal("prix"))+" MAD"));
-                      
+                        document.Add(new Paragraph("|=============Bon Voyage=============|"));
                         // Close the document  
                         document.Close();
                         // Close the writer instance  
@@ -267,5 +269,77 @@ namespace Gestion_Ticket_Reservation
             }
 
         }
-    }
-}
+        private string getStationNameById(int id)
+        {
+            string station=null;
+            try
+            {
+                SqlConnection sqlConnection = Connexion.Connect();
+                string selectquery = "SELECT nom FROM t_station where id =" + id;
+                SqlCommand sqlCommand = new SqlCommand(selectquery, sqlConnection);
+                using (SqlDataReader read = sqlCommand.ExecuteReader())
+                {
+                    if (read.Read())
+                    {
+                        station = read.GetValue(read.GetOrdinal("nom")).ToString();
+                        return station;
+                      
+                    }
+                }
+               
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+                 return station;
+            }
+             return station;
+        }
+
+         private string getUserNameById(int id)
+        {
+            string userName = null;
+            try
+            {
+                SqlConnection sqlConnection = Connexion.Connect();
+                string selectquery = "SELECT nom FROM t_user where id =" + id;
+                SqlCommand sqlCommand = new SqlCommand(selectquery, sqlConnection);
+                using (SqlDataReader read = sqlCommand.ExecuteReader())
+                {
+                    if (read.Read())
+                    {
+                        userName = read.GetValue(read.GetOrdinal("nom")).ToString();
+                        return userName;
+                      
+                    }
+                }
+               
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString());
+                return userName;
+            }
+            return userName;
+        }
+
+         private void label8_Click(object sender, EventArgs e)
+         {
+
+         }
+
+         private void button4_Click(object sender, EventArgs e)
+         {
+             new Login().Show();
+             this.Hide();
+         }
+
+         private void pictureBox1_Click(object sender, EventArgs e)
+         {
+             
+         }
+        }
+        }
+
+    
+

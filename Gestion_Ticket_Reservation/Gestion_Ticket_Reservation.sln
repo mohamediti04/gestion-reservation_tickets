@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_Ticket_Reservation", "Gestion_Ticket_Reservation\Gestion_Ticket_Reservation.csproj", "{E727BAC0-0ECE-4708-9D6E-53970B0D1391}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{7736C280-E914-4F3B-8AD1-B401A1D64092}"
+	ProjectSection(SolutionItems) = preProject
+		Gestion_Ticket_Reservation\bin\Debug\bus.jpg = Gestion_Ticket_Reservation\bin\Debug\bus.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
