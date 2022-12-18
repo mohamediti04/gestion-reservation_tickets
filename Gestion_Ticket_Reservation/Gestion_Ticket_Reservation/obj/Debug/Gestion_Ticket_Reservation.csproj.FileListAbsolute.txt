@@ -20,3 +20,4 @@ C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Tick
 C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Properties.Resources.resources
 C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.Ticket.resources
 C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\obj\Debug\Gestion_Ticket_Reservation.csproj.GenerateResource.Cache
+C:\Users\Mohamed ITI\Desktop\db sql bus\gestion-reservation_tickets\Gestion_Ticket_Reservation\Gestion_Ticket_Reservation\bin\Debug\itextsharp.dll
